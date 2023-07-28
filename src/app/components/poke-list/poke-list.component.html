@@ -1,0 +1,36 @@
+<div *ngIf="type === 'all'; else typeblock">
+  <button *ngFor="let pokemon of pokemonList"
+    class="container-pokemonName"
+    (click) = "pokemonDetail(pokemon.url)">
+    <img class="pokeball" src="../../../assets/pokeball.png" alt="pokeball">
+    <div class="id"
+      [ngSwitch]="pokemon.id.length">
+      <h1 *ngSwitchCase="1"> 00{{pokemon.id}}</h1>
+      <h1 *ngSwitchCase="2">0{{pokemon.id}}</h1>
+      <h1 *ngSwitchCase="3"> {{pokemon.id}}</h1>
+      <h1 *ngSwitchCase="4"> {{pokemon.id}}</h1>
+    </div>
+    <h1 class="name">{{pokemon.name|titlecase}}</h1>
+  </button>
+
+</div>
+
+<ng-template #typeblock>
+  <button *ngFor="let pokemon of typeList"
+    class="container-pokemonName"
+    (click) = "pokemonDetail(pokemon.url)">
+    <img class="pokeball" src="../../../assets/pokeball.png" alt="pokeball">
+    <div class="id" [ngSwitch]="pokemon.id.length">
+      <h1 *ngSwitchCase="1"> 00{{pokemon.id}}</h1>
+      <h1 *ngSwitchCase="2">0{{pokemon.id}}</h1>
+      <h1 *ngSwitchCase="3"> {{pokemon.id}}</h1>
+      <h1 *ngSwitchCase="4"> {{pokemon.id}}</h1>
+    </div>
+    <h1 class="name">{{pokemon.name|titlecase}}</h1>
+  </button>
+</ng-template>
+
+
+
+
+

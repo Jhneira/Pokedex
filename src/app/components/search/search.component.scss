@@ -1,0 +1,32 @@
+.search {
+  width: 100%;
+}
+
+.search input {
+  background-color: var(--colorPantalla);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem 0 0.3rem 0.5rem;
+}
+
+.pokemon-result {
+  background-color: var(--colorPantalla);
+  height: 25rem;
+  overflow: auto;
+}
+
+.pokemon-result button {
+  width: 100%;
+  margin-top: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--colorPantalla);
+  &:hover {
+    background-color: var(--colorList);
+    transition: 0.2s;
+    border-bottom: 0.25rem solid var(--colorPrimario);
+  }
+
+}

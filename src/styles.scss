@@ -1,0 +1,45 @@
+:root {
+  --colorPrimario : #ff0000;
+  --colorSecundario: #DC143C;
+  --colorPantalla: rgb(250, 237, 214);
+  --colorList:rgb(226, 215, 195);
+  --colorGrass: #32CD32;
+  --colorPoison: #BA55D3;
+  --colorFire:#FF4500;
+  --colorWater:	#1E90FF;
+  --colorBug:	#228B22;
+  --colorFlying: #00BFFF;
+  --colorNormal: 	#808080;
+  --colorFighting: 	#FF6347;
+  --colorGround: 	#8B4513;
+  --colorRock: #CD853F;
+  --colorSteel: #708090 ;
+  --colorGhost: 		#9400D3;
+  --colorElectric:	#FFD700;
+  --colorPsychic:	#FF69B4;
+  --colorIce: #00CED1;
+  --colorDragon: #191970;
+  --colorDark:#8B008B ;
+  --colorFairy: 	#FF69B4;
+
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(rgba(6, 6, 6, 0.6),rgba(6, 6, 6, 0.6))
+  ,url(./assets/fondoPokemon.png);
+  background-size: cover;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

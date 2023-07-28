@@ -1,0 +1,9 @@
+<div class=" search">
+  <input  type="search" placeholder="Pokemon name" [formControl] = "searchField">
+  <div *ngIf="searchField.value && showPokemon" class="pokemon-result">
+    <button *ngFor="let pokemon of pokemonSearched"
+    (click)=" pokemonDetail(pokemon.url)">
+      <h1> {{pokemon.name|titlecase}}</h1>
+    </button>
+  </div>
+</div>

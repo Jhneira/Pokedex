@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="pokedex">
+    <div class="header-border"></div>
+    <div class="header-pokedex">
+      <div class="led" [ngClass]="{'turn': open === true}"></div>
+    </div>
+
+    <div class="pokedexback" [ngClass]="{'flipped': open === true}">
+
+      <div class="cover-front">
+
+        <div class="type-container">
+          <label for="types"> Type</label>
+          <select name="types" [formControl] = "typeField">
+            <option *ngFor="let type of types" [value]="type.name"> {{type.name|titlecase}}</option>
+          </select>
+        </div>
+
+
+        <div class="list-container"
+          infiniteScroll
+          [infiniteScrollDistance]="3"
+          [scrollWindow]="false"
+          (scrolled)="morePokemon()">
+          <app-poke-list [type] = "typeField.value" [limit]="limit" [offset]="offset"></app-poke-list>
+        </div>
+        <button class="buttonClose" (click)="openPokedex()"></button>
+        <button class="buttonBorderClose"></button>
+
+
+      </div>
+
+      <div class="cover-back">
+        <button class="buttonOpen" (click)="openPokedex()"></button>
+        <button class="buttonOpenBorder"></button>
+        <img class="back-logo" src="../../../assets/pokelogo.png" alt="logo pokemon">
+      </div>
+
+    </div>
+
+    <div class="pokedexfront" [ngClass]="{'up': front === true}">
+
+      <div class="front">
+        <div class="container-search">
+          <app-search></app-search>
+        </div>
+
+        <div class = "container-detail">
+          <app-pokemon-detail></app-pokemon-detail>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+

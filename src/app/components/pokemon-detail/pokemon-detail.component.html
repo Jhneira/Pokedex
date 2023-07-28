@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 class="name">{{pokemonDetail.name|titlecase}}</h1>
+  <div class="types-container">
+    <div class="type" *ngFor="let type of pokemonDetail.types"
+    [ngClass]="{'normal': type.type.name === 'normal', 'fighting': type.type.name === 'fighting',
+      'poison': type.type.name === 'poison','grass': type.type.name === 'grass',
+      'flying': type.type.name === 'flying','ground': type.type.name === 'ground',
+      'rock': type.type.name === 'rock', 'bug': type.type.name === 'bug',
+      'ghost': type.type.name === 'ghost','steel': type.type.name === 'steel',
+      'fire': type.type.name === 'fire', 'water': type.type.name === 'water',
+      'electric': type.type.name === 'electric', 'psychic': type.type.name === 'psychic',
+      'ice': type.type.name === 'ice', 'dragon': type.type.name === 'dragon',
+      'dark': type.type.name === 'dark', 'fairy': type.type.name === 'fairy' }">
+      {{type.type.name|titlecase}}
+    </div>
+  </div>
+  <img *ngIf="shiny === false" class="pokemonImage" [src]="pokemonDetail.sprite" alt="">
+  <img *ngIf="shiny === true" class="pokemonImage" [src]="pokemonDetail.shinySprite" alt="">
+
+  <div class="shiny">
+    <button class="buttonChanges"
+    [ngClass]="{'selected': shiny === false}" (click)="selected()">Default</button>
+    <button class="buttonChanges"
+    [ngClass]="{'selected': shiny === true}" (click)="selected()">Shiny</button>
+  </div>
+</div>
