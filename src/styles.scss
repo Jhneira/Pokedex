@@ -43,3 +43,14 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: linear-gradient(rgba(6, 6, 6, 0.6),rgba(6, 6, 6, 0.6))
+    ,url(./assets/fondoPokemon.png);
+    background-size: contain;
+    background-repeat: round;
+  }
+
+}

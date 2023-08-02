@@ -2,12 +2,11 @@
   width: 100%;
   margin-top: 1rem;
   position: relative;
+
 }
 .pokedex {
-  grid-column: 2/3;
   position: absolute;
   left: 20%;
-
 }
 
 .header-pokedex{
@@ -228,3 +227,100 @@
   z-index: 0;
 }
 
+@media screen and (max-width: 500px) {
+
+  .pokedex {
+    width: 98%;
+    margin: 0 auto;
+    left: 1rem;
+  }
+
+  .header-pokedex{
+    width: 90%;
+    height: 40vh ;
+  }
+
+  .header-border {
+    width: 90%;
+    height: 40vh;
+  }
+
+  .led {
+    top: 1rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .pokedexback,
+  .pokedexfront{
+    width: 90%;
+    height: 40vh;
+  }
+
+  .cover-back,
+  .cover-front,
+  .front {
+    height: 40vh;
+    transform-origin: bottom;
+  }
+
+  .buttonOpen {
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+  }
+
+  .buttonOpenBorder{
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+
+  }
+
+  .back-logo {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .flipped .cover-back,
+  .flipped .cover-front {
+    transform: rotateX(-180deg);
+  }
+
+  .container-search{
+    margin-top: 2rem;
+
+  }
+
+  .container-detail {
+    margin-top: 1rem;
+    border-radius: 5%;
+
+  }
+
+  .type-container {
+    align-self: center;
+    justify-self: start;
+    margin-top: 0;
+    transform: rotateX(-180deg);
+  }
+
+  .list-container{
+    transform: rotateX(-180deg);
+  }
+
+  .type-container select {
+    height: 100%;
+  }
+
+
+  .buttonClose{
+    clip-path: polygon(53% 100%, 0 0, 100% 0);
+    margin-top: 1rem;
+
+  }
+
+  .buttonBorderClose {
+    clip-path: polygon(53% 100%, 0 0, 100% 0);
+    margin-top: 1rem;
+  }
+
+
+}
